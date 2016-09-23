@@ -4,8 +4,19 @@
   "description": "REST backend",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "babel-watch src/server.js",
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-0": "^6.5.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0",
+    ],
+  },
 }
