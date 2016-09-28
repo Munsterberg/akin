@@ -6,7 +6,10 @@
   "scripts": {
     "start": "babel-watch src/server.js",
     "lint": "eslint src/ || true",
-    "test": "NODE_ENV=test mocha --require test/helpers/setup.js || true"
+    "test": "NODE_ENV=test mocha --require test/helpers/setup.js || true",
+    "db:start": "sudo docker run -d -p 28015:28015 -p 8090:8080 -v $PWD/db:/data --name azkdb rethinkdb",
+    "db:stop": "sudo docker stop azkdb",
+    "db:rm": "sudo docker rm azkdb"
   },
   "author": "",
   "license": "MIT",
